@@ -1,4 +1,4 @@
-package src;
+package AulaCarro;
 
 public interface IAuto {
     public abstract double acelerar(double acelerar);

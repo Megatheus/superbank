@@ -1,6 +1,6 @@
-package src;
+package AulaCarro;
 
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Principal {
     
@@ -58,3 +58,4 @@ public class Principal {
         }while (acao != 4);
     }
 }
+*/

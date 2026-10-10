@@ -30,10 +30,15 @@ public class Poupanca extends Conta implements IContas, ICliente {
 
         System.out.println("Seu banco é :" + this.getNumbank() +
                        "\n Sua conta corrente é: " + this.getNumero() +
-                       "\n Nome do cliente: " + this.getNomeclien() +
+                       "\n Nome do cliente: " + this.getCpfclien() +
                        "\n CPF do cliente: " + this.getCpfclien());
 
 
+    }
+
+    private String getCpfclien() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCpfclien'");
     }
     
 }

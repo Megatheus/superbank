@@ -1,4 +1,4 @@
-package src;
+package AulaCarro;
 
 public class Carro extends Auto implements IAuto {
 
@@ -41,7 +41,7 @@ public class Carro extends Auto implements IAuto {
     }
 
     public void marcha(int marcha) {
-        if (marcha <0 || marcha > 5) {
+        if (marcha <1 || marcha > 5) {
             System.out.println("Marcha inválida!");
             return;
         }
