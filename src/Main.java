@@ -10,12 +10,45 @@ public class Main {
 
         List<Usuario> usuario = new ArrayList<>();
 
-        usuario.add(new Usuario("Ronaldo","faaaaaaah"));
-        usuario.add(new Usuario("Gelado","fica frio ai"));
-        usuario.add(new Usuario("Cristiano","de bicicleta minha nossaaaaaa"));
-        usuario.add(new Usuario("Kratos","Oh meu Deus, o que eu fiz?"));
-        usuario.add(new Usuario("Vector","AEEEEEEEEEEEE"));
-   
+        {
+            System.out.println("\n === MENU PRINCIPAL ===");
+            System.out.println("1 - Cadastrar");
+            System.out.println("2 - Entrar");
+            System.out.println("3 - Sair");
+
+        boolean cadastroSucesso = false;
+
+        while(!cadastroSucesso){
+
+            System.out.println("/n === TELA DE CADASTRO ===");
+            System.out.println("Digite o usuário:");
+            String usuarioDigitado = scanner.nextLine();
+            System.out.println("Digite a senha:");
+            String senhaDigitada = scanner.nextLine();
+
+            boolean usuarioExistente = false;
+
+            for(Usuario credencial : usuario){
+                String login = credencial.getLogin();
+                String senha = credencial.getSenha();
+
+                if(login.equals(usuarioDigitado)){
+                    usuarioExistente = true;
+                    break;
+                }
+            }
+
+            if(usuarioExistente){
+                System.out.println("\nUsuário já existe. Tente novamente. \n");
+            } else {
+                usuario.add(new Usuario(usuarioDigitado, senhaDigitada));
+                System.out.println("Cadastro realizado com sucesso!\n");
+                cadastroSucesso = true;
+                break;
+            }
+
+        }
+    }
         boolean loginSucesso = false;
 
         while (!loginSucesso) {
@@ -37,7 +70,7 @@ public class Main {
                     break;
                 }
             }
-
+            
             if (usuarioEncontrado) {
                 System.out.println("\nLogin realizado com sucesso! Bem-vindo(a), " + usuarioDigitado + "!\n");
                 loginSucesso = true;
@@ -46,5 +79,6 @@ public class Main {
             }
         }
         scanner.close();
+    
     }
 }
